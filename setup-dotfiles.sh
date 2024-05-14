@@ -1,4 +1,9 @@
 # ===Copy dotfiles===
+curl -LJf https://github.com/soda3x/dotfiles/raw/master/.bash_aliases -o ~/.bash_aliases
+curl -LJf https://github.com/soda3x/dotfiles/raw/master/.bashrc -o ~/.bashrc
+curl -LJf https://github.com/soda3x/dotfiles/raw/master/.gitconfig -o ~/.gitconfig
+curl -LJf https://github.com/soda3x/dotfiles/raw/master/.hushlogin -o ~/.hushlogin
+curl -LJf https://github.com/soda3x/dotfiles/raw/master/.tmux.conf -o ~/.tmux.conf
 
 # ===Install programs===
 
