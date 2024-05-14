@@ -5,6 +5,30 @@ curl -LJf https://github.com/soda3x/dotfiles/raw/master/.gitconfig -o ~/.gitconf
 curl -LJf https://github.com/soda3x/dotfiles/raw/master/.hushlogin -o ~/.hushlogin
 curl -LJf https://github.com/soda3x/dotfiles/raw/master/.tmux.conf -o ~/.tmux.conf
 
+# ===Update Gitconfig===
+# I like to use my dotfiles at work too, for work I obviously don't want to use my at-home gitconfig
+# for anyone using my dotfiles, i suppose this will allow you to specify your own gitconfig
+# without editing the file directly
+
+# Set default values for username and email
+default_name="Bradley Newman"
+default_email="bnewman227@gmail.com"
+
+if [ "$#" -eq 2 ]; then
+    name="$1"
+    email="$2"
+elif [ "$#" -eq 0 ]; then
+    name="$default_name"
+    email="$default_email"
+else
+    echo "Usage: $0 [<gitconfig-name> <gitconfig-email>]"
+    exit 1
+fi
+
+# Update .gitconfig with provided username and email
+sed -i "s/name = .*/name = $name/" ~/.gitconfig
+sed -i "s/email = .*/email = $email/" ~/.gitconfig
+
 # ===Install programs===
 
 # Install Nerd Fonts
@@ -50,8 +74,6 @@ sudo apt install gdu -y
 
 curl -LO https://github.com/ClementTsang/bottom/releases/download/0.9.6/bottom_0.9.6_amd64.deb
 sudo dpkg -i bottom_0.9.6_amd64.deb
-
-
 
 # Install Tmux + Tmux Plugin Manager
 sudo apt install tmux -y
