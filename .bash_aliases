@@ -1,0 +1,47 @@
+alias clear='clear && fastfetch'
+
+# Vim aliases
+alias vim='nvim'
+alias vi='nvim'
+
+# Git aliases
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gco='git checkout'
+alias gb='git branch'
+alias gbr='git branch -a'
+alias gl='git log --oneline --decorate --graph'
+alias gd='git diff'
+alias gcl='git clone'
+alias gp='git pull'
+alias gps='git push'
+alias gpl='git pull --rebase'
+alias gr='git remote -v'
+alias gss='git stash save'
+alias gsp='git stash pop'
+alias gsa='git stash apply'
+
+# Docker aliases
+alias dps='docker ps -a'
+alias dpa='docker ps -a --format "table {{.ID}}\t{{.Names}}\t{{.Status}}\t{{.Ports}}"'
+alias dimages='docker images'
+alias dclean='docker system prune -a'
+alias dlogs='docker logs'
+alias dstopall='docker stop $(docker ps -a -q)'
+alias drun='docker run'
+alias dexec='docker exec -it'
+alias dbuild='docker build'
+alias dcompose='docker-compose'
+alias dvolume='docker volume'
+alias dnetwork='docker network'
+
+# Docker Compose aliases
+alias dc='docker-compose'
+alias dcu='docker-compose up'
+alias dcd='docker-compose down'
+alias dcb='docker-compose build'
+alias dcp='docker-compose pull'
+alias dcps='docker-compose ps'
+alias dcl='docker-compose logs'
+alias dcx='docker-compose exec'
