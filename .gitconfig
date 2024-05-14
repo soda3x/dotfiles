@@ -4,7 +4,7 @@
 [core]
 	editor = vim
 [init]
-  autoSetupRemote = origin
+	autoSetupRemote = origin
 [push]
-  default = simple
-  autoSetupRemote = origin
+	default = simple
+	autoSetupRemote = origin
