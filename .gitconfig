@@ -1,0 +1,10 @@
+[user]
+	email = bnewman227@gmail.com
+	name = Bradley Newman
+[core]
+	editor = vim
+[init]
+  autoSetupRemote = origin
+[push]
+  default = simple
+  autoSetupRemote = origin
