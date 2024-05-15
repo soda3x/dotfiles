@@ -32,7 +32,7 @@ sed -i "s/email = .*/email = $email/" ~/.gitconfig
 # ===Install programs===
 
 # Install Nerd Fonts
-git clone --filter=blob:none --sparse git@github.com:ryanoasis/nerd-fonts
+git clone --filter=blob:none --sparse https://github.com/ryanoasis/nerd-fonts.git
 cd nerd-fonts
 ./install.sh
 cd ..
