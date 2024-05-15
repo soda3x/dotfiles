@@ -51,7 +51,7 @@ sudo apt install fastfetch -y
 sudo apt install gcc -y
 
 # Install Python
-sudo apt install python -y
+sudo apt install python3 -y
 
 # Install Node
 curl -fsSL https://fnm.vercel.app/install | bash
@@ -83,7 +83,7 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 tar xf lazygit.tar.gz lazygit
-sudo install lazygit /usr/local/bin -y
+sudo install lazygit /usr/local/bin
 
 # Install Lazydocker
 curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
