@@ -1,9 +1,9 @@
 # ===Copy dotfiles===
-curl -LJf https://github.com/soda3x/dotfiles/raw/master/.bash_aliases -o /home/$USER/.bash_aliases
-curl -LJf https://github.com/soda3x/dotfiles/raw/master/.bashrc -o /home/$USER/.bashrc
-curl -LJf https://github.com/soda3x/dotfiles/raw/master/.gitconfig -o /home/$USER/.gitconfig
-curl -LJf https://github.com/soda3x/dotfiles/raw/master/.hushlogin -o /home/$USER/.hushlogin
-curl -LJf https://github.com/soda3x/dotfiles/raw/master/.tmux.conf -o /home/$USER/.tmux.conf
+curl -LJf https://github.com/soda3x/dotfiles/raw/master/.bash_aliases -o "/home/$USER/.bash_aliases"
+curl -LJf https://github.com/soda3x/dotfiles/raw/master/.bashrc -o "/home/$USER/.bashrc"
+curl -LJf https://github.com/soda3x/dotfiles/raw/master/.gitconfig -o "/home/$USER/.gitconfig"
+curl -LJf https://github.com/soda3x/dotfiles/raw/master/.hushlogin -o "/home/$USER/.hushlogin"
+curl -LJf https://github.com/soda3x/dotfiles/raw/master/.tmux.conf -o "/home/$USER/.tmux.conf"
 
 # ===Update Gitconfig===
 # I like to use my dotfiles at work too, for work I obviously don't want to use my at-home gitconfig
@@ -26,8 +26,8 @@ else
 fi
 
 # Update .gitconfig with provided username and email
-sed -i "s/name = .*/name = $name/" /home/$USER/.gitconfig
-sed -i "s/email = .*/email = $email/" home/$USER/.gitconfig
+sed -i "s/name = .*/name = $name/" "/home/$USER/.gitconfig"
+sed -i "s/email = .*/email = $email/" "/home/$USER/.gitconfig"
 
 # ===Install programs===
 
@@ -61,8 +61,8 @@ fnm use --install-if-missing 20
 curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim-linux64.tar.gz
 sudo rm -rf /opt/nvim
 sudo tar -C /opt -xzf nvim-linux64.tar.gz
-git clone --depth 1 https://github.com/AstroNvim/template /home/$USER/.config/nvim
-rm -rf /home/$USER/.config/nvim/.git
+git clone --depth 1 https://github.com/AstroNvim/template "/home/$USER/.config/nvim"
+rm -rf "/home/$USER/.config/nvim/.git"
 
 cargo install tree-sitter-cli
 
@@ -77,7 +77,7 @@ sudo dpkg -i bottom_0.9.6_amd64.deb
 
 # Install Tmux + Tmux Plugin Manager
 sudo apt install tmux -y
-git clone https://github.com/tmux-plugins/tpm /home/$USER/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm "/home/$USER/.tmux/plugins/tpm"
 
 # Install Lazygit
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
@@ -91,7 +91,7 @@ curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/i
 #===Finish===
 
 # Reload Tmux (in the case it was already installed
-source /home/$USER/.tmux.conf
+source "/home/$USER/.tmux.conf"
 
 # Reload bash
-source /home/$USER/.bashrc
+source "/home/$USER/.bashrc"
