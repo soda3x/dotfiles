@@ -94,9 +94,9 @@ sudo install lazygit /usr/local/bin
 curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/install_update_linux.sh | bash
 
 #===Finish===
-
-# Reload Tmux (in the case it was already installed
-source "/home/$user/.tmux.conf"
-
-# Reload bash
+# Source files so you don't need to restart bash
+source "/home/$user/.bash_aliases"
 source "/home/$user/.bashrc"
+source "/home/$user/.gitconfig"
+source "/home/$user/.hushlogin"
+tmux source "/home/$user/.tmux.conf"
