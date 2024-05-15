@@ -90,5 +90,8 @@ curl https://raw.githubusercontent.com/jesseduffield/lazydocker/master/scripts/i
 
 #===Finish===
 
+# Reload Tmux (in the case it was already installed
+source ~/.tmux.conf
+
 # Reload bash
 source ~/.bashrc
