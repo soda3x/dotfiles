@@ -100,3 +100,6 @@ source "/home/$user/.bashrc"
 source "/home/$user/.gitconfig"
 source "/home/$user/.hushlogin"
 tmux source "/home/$user/.tmux.conf"
+
+# Chown folders created by root
+sudo chown -R $user:$user "/home/$user/.config/nvim/"
