@@ -119,6 +119,6 @@ fi
 # run these commands
 clear
 
-export PATH="$PATH:/opt/nvim-linux64/bin"
+export PATH="$PATH:/opt/nvim-linux64/bin:/root/.cargo/bin"
 
 [ -z "$TMUX"  ] && { tmux attach || exec tmux new-session && exit;}
