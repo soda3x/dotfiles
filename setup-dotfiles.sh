@@ -1,13 +1,13 @@
 #!/bin/bash
 
 # ===Copy dotfiles===
-curl -LJf https://github.com/soda3x/dotfiles/raw/master/.bash_aliases -o "/home/$USER/.bash_aliases"
-curl -LJf https://github.com/soda3x/dotfiles/raw/master/.bashrc -o "/home/$USER/.bashrc"
-curl -LJf https://github.com/soda3x/dotfiles/raw/master/.gitconfig -o "/home/$USER/.gitconfig"
-curl -LJf https://github.com/soda3x/dotfiles/raw/master/.hushlogin -o "/home/$USER/.hushlogin"
-curl -LJf https://github.com/soda3x/dotfiles/raw/master/.tmux.conf -o "/home/$USER/.tmux.conf"
-curl -LJf https://github.com/soda3x/dotfiles/raw/master/brad.knsv -o "/home/$USER/brad.knsv"
-curl -LJf https://github.com/soda3x/dotfiles/raw/master/alacritty.toml -o "/home/$USER/.config/alacritty.toml"
+curl -LJf https://github.com/soda3x/dotfiles/raw/master/.bash_aliases -o "/home/brad/.bash_aliases"
+curl -LJf https://github.com/soda3x/dotfiles/raw/master/.bashrc -o "/home/brad/.bashrc"
+curl -LJf https://github.com/soda3x/dotfiles/raw/master/.gitconfig -o "/home/brad/.gitconfig"
+curl -LJf https://github.com/soda3x/dotfiles/raw/master/.hushlogin -o "/home/brad/.hushlogin"
+curl -LJf https://github.com/soda3x/dotfiles/raw/master/.tmux.conf -o "/home/brad/.tmux.conf"
+curl -LJf https://github.com/soda3x/dotfiles/raw/master/brad.knsv -o "/home/brad/brad.knsv"
+curl -LJf https://github.com/soda3x/dotfiles/raw/master/alacritty.toml -o "/home/brad/.config/alacritty.toml"
 
 if [[ "$SHELL" != "/bin/bash" ]]; then
     echo "Changing default shell to bash..."
@@ -20,10 +20,10 @@ fi
 
 # ===Source configs===
 # Source files so you don't need to restart bash
-source "/home/$USER/.bash_aliases"
-source "/home/$USER/.bashrc"
-source "/home/$USER/.gitconfig"
-source "/home/$USER/.hushlogin"
+source "/home/brad/.bash_aliases"
+source "/home/brad/.bashrc"
+source "/home/brad/.gitconfig"
+source "/home/brad/.hushlogin"
 
 # These will obviously only work if the above source worked
 rb
@@ -31,15 +31,15 @@ rt
 
 echo "Importing KDE Plasma profile..."
 paru -S konsave
-konsave -i "/home/$USER/brad.knsv"
+konsave -i "/home/brad/brad.knsv"
 konsave -a brad
 
 echo "Installing packages..."
-curl -LJf https://github.com/soda3x/dotfiles/raw/master/packages.txt -o "/home/$USER/packages.txt"
+curl -LJf https://github.com/soda3x/dotfiles/raw/master/packages.txt -o "/home/brad/packages.txt"
 
 REPO_PKGS=()
 AUR_PKGS=()
-PACKAGE_FILE="/home/$USER/packages.txt"
+PACKAGE_FILE="/home/brad/packages.txt"
 
 # Read the file, ignoring comments and empty lines
 for pkg in $(grep -E -v '^\s*#|^\s*$' "$PACKAGE_FILE"); do
