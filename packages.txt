@@ -1,0 +1,16 @@
+lazydocker
+lazygit
+docker
+docker-buildx
+docker-compose
+vesktop
+spotify
+rustup
+qpwgraph
+tmux
+jdk-openjdk
+jdk21-openjdk
+bitwarden
+betterbird
+visual-studio-code-bin
+dotnet-sdk
